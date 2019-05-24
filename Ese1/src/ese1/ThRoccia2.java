@@ -6,6 +6,8 @@
 package ese1;
 
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -19,8 +21,23 @@ public class ThRoccia2 extends Thread{
     }
     
     public void run() {
-        System.out.println("Seconda roccia colpita");
+        try {
+            //arrivo razzo 2
+            ptrDati.getArrivoR2().acquire();
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ThRoccia2.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         System.out.println("Inizio disintegrazione seconda roccia");
+        
+        Random r = new Random();
+        
+        try {
+            Thread.sleep(r.nextInt(2)+1);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ThRazzo2.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         System.out.println("Fine disintegrazione seconda roccia");
     }
 }
