@@ -11,7 +11,7 @@ import java.util.*;
  *
  * @author molteni_alessandro
  */
-public class ThRazzo2 {
+public class ThRazzo2 extends Thread{
     private DatiCondivisi ptrDati;
     
     public ThRazzo2(DatiCondivisi ptrDati) {
