@@ -11,7 +11,7 @@ import java.util.*;
  *
  * @author molteni_alessandro
  */
-public class ThContaDispari {
+public class ThContaDispari extends Thread{
     DatiCondivisi ptrDati;
     
     public ThContaDispari(DatiCondivisi ptrDati) {

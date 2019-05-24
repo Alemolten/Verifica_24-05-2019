@@ -23,10 +23,17 @@ public class ThContaPari extends Thread{
         ArrayList array = ptrDati.getNumeriGenerati();
         Object numero = array.get(posizione);
         int n = Integer.parseInt(numero.toString());
-        if(n%2==0) {
-            int pari = ptrDati.getNumeroLettiPari();
-            pari = pari + 1;
-            ptrDati.setNumeroLettiPari(pari);
+        if(n!=0) {
+            if(n%2==0) {
+                int pari = ptrDati.getNumeroLettiPari();
+                pari = pari + 1;
+                ptrDati.setNumeroLettiPari(pari);
+            }
+        }
+        else {
+            int zero = ptrDati.getNumeroZero();
+            zero = zero + 1;
+            ptrDati.setNumeroZero(zero);
         }
     }
 }

@@ -5,6 +5,8 @@
  */
 package ese2;
 
+import java.util.*;
+
 /**
  *
  * @author molteni_alessandro
@@ -16,6 +18,22 @@ public class Ese2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        DatiCondivisi dati = new DatiCondivisi();
+        ThGenera thG = new ThGenera(dati);
+        ThContaPari thCP = new ThContaPari(dati);
+        ThContaDispari thCD = new ThContaDispari(dati);
+        ThVisualizza thV = new ThVisualizza(dati);
+        
+        Scanner input = new Scanner(System.in);
+        System.out.println("Inserire il numero di numeri da generare");
+        int nGenerare = input.nextInt();
+        
+        dati.setNumeroElementi(nGenerare);
+        
+        thG.start();
+        thCP.start();
+        thCD.start();
+        thV.start();
     }
     
 }
