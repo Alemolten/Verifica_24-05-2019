@@ -19,5 +19,24 @@ public class ThGenera extends Thread{
     
     public void run() {
         Random r = new Random();
+        int numeroElementi = ptrDati.getNumeroElementi();
+        int numeroGenerato;
+        
+        for(int i = 0; i < numeroElementi; i++) {
+            numeroGenerato = r.nextInt(37);
+            ArrayList array = ptrDati.getNumeriGenerati();
+            array.add(numeroGenerato);
+            ptrDati.setNumeriGenerati(array);
+            if(numeroGenerato%2==0) {
+                int pari = ptrDati.getNumeroInseritiPari();
+                pari = pari + 1 ;
+                ptrDati.setNumeroInseritiPari(pari);
+            }
+            else {
+                int dispari = ptrDati.getNumeroInseritiDispari();
+                dispari = dispari + 1;
+                ptrDati.setNumeroInseritiDispari(dispari);
+            }
+        }
     }
 }
