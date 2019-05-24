@@ -5,10 +5,20 @@
  */
 package ese1;
 
+import java.util.*;
+
 /**
  *
  * @author molteni_alessandro
  */
 public class ThRazzo2 {
+    private DatiCondivisi ptrDati;
     
+    public ThRazzo2(DatiCondivisi ptrDati) {
+        this.ptrDati = ptrDati;
+    }
+    
+    public void run() {
+        System.out.println("Lancio secondo razzo");
+    }
 }
