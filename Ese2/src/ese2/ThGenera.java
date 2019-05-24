@@ -5,10 +5,19 @@
  */
 package ese2;
 
+import java.util.*;
 /**
  *
  * @author molteni_alessandro
  */
-public class ThGenera {
+public class ThGenera extends Thread{
+    DatiCondivisi ptrDati;
     
+    public ThGenera(DatiCondivisi ptrDati) {
+        this.ptrDati = ptrDati;
+    }
+    
+    public void run() {
+        Random r = new Random();
+    }
 }
