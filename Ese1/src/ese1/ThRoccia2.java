@@ -5,10 +5,22 @@
  */
 package ese1;
 
+import java.util.*;
+
 /**
  *
  * @author molteni_alessandro
  */
-public class ThRoccia2 {
+public class ThRoccia2 extends Thread{
+    DatiCondivisi ptrDati;
     
+    public ThRoccia2(DatiCondivisi ptrDati) {
+        this.ptrDati = ptrDati;
+    }
+    
+    public void run() {
+        System.out.println("Seconda roccia colpita");
+        System.out.println("Inizio disintegrazione seconda roccia");
+        System.out.println("Fine disintegrazione seconda roccia");
+    }
 }
