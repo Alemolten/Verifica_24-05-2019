@@ -25,6 +25,7 @@ public class Ese1 {
         ThRoccia2 thRo2 = new ThRoccia2(dati);
         
         Scanner input = new Scanner(System.in);
+        System.out.println("Inserire la lettera S per far partire il lancio dei razzi");
         String lettera = input.next();
         
         if(lettera.equals("S")) {
