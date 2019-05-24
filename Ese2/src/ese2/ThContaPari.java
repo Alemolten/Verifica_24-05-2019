@@ -5,10 +5,28 @@
  */
 package ese2;
 
+import java.util.*;
+
 /**
  *
  * @author molteni_alessandro
  */
-public class ThContaPari {
+public class ThContaPari extends Thread{
+    DatiCondivisi ptrDati;
     
+    public ThContaPari(DatiCondivisi ptrDati) {
+        this.ptrDati = ptrDati;
+    }
+    
+    public void run() {
+        int posizione = ptrDati.getPosizione();
+        ArrayList array = ptrDati.getNumeriGenerati();
+        Object numero = array.get(posizione);
+        int n = Integer.parseInt(numero.toString());
+        if(n%2==0) {
+            int pari = ptrDati.getNumeroLettiPari();
+            pari = pari + 1;
+            ptrDati.setNumeroLettiPari(pari);
+        }
+    }
 }

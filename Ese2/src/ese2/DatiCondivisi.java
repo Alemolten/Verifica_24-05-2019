@@ -12,25 +12,27 @@ import java.util.*;
  * @author molteni_alessandro
  */
 public class DatiCondivisi {
-    private ArrayList numeriGenerati;
+    private ArrayList<Integer> numeriGenerati;
     private int numeroElementi;
     private int numeroInseritiPari;
     private int numeroInseritiDispari;
     private int numeroLettiPari;
     private int numeroLettiDispari;
     private int numeroZero;
+    private int posizione;
     
     public DatiCondivisi() {
-        this.numeriGenerati = new ArrayList();
+        this.numeriGenerati = new ArrayList<Integer>();
         this.numeroElementi = 0;
         this.numeroInseritiPari = 0;
         this.numeroInseritiDispari = 0;
         this.numeroLettiPari = 0;
         this.numeroLettiDispari = 0;
         this.numeroZero = 0;
+        this.posizione = 0;
     }
 
-    public ArrayList getNumeriGenerati() {
+    public ArrayList<Integer> getNumeriGenerati() {
         return numeriGenerati;
     }
 
@@ -56,6 +58,10 @@ public class DatiCondivisi {
 
     public int getNumeroZero() {
         return numeroZero;
+    }
+
+    public int getPosizione() {
+        return posizione;
     }
 
     public void setNumeriGenerati(ArrayList numeriGenerati) {
@@ -84,5 +90,9 @@ public class DatiCondivisi {
 
     public void setNumeroZero(int numeroZero) {
         this.numeroZero = numeroZero;
+    }
+
+    public void setPosizione(int posizione) {
+        this.posizione = posizione;
     }
 }
